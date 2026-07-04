@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS v4 Padding Groups Preview</title>
+  <!-- Tailwind v4 Play CDN -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  
+  <style>
+    /* CSS Variables matching your custom property tokens */
+    :root {
+      --spacing: 0.25rem; /* Base Tailwind Unit */
+      --custom-property: 2rem; /* Used in p-(...) classes */
+    }
+    
+    /* Custom Helper for better visualization of inner content */
+    .content-box {
+      background-color: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      color: #a5b4fc;
+      font-size: 12px;
+      padding: 8px;
+      text-align: center;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans p-6">
+
+  <header class="max-w-6xl mx-auto mb-8 border-b border-slate-800 pb-4">
+    <h1 class="text-2xl font-bold text-indigo-400">Tailwind v4 Padding Live Sandbox</h1>
+    <p class="text-slate-400 text-sm">Is code ko save karke run kijiye. Har section me same groups ke classes ka active output live dikhega.</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto space-y-12">
+
+    <!-- GROUP 1: Global Padding (p-) -->
+    <section class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-6">
+      <h2 class="text-lg font-bold text-emerald-400 mb-2">Group 1: Global Padding (All 4 Sides)</h2>
+      <p class="text-xs text-slate-400 mb-4">p-&lt;number&gt; | p-px | p-(&lt;custom-property&gt;) | p-[&lt;value&gt;]</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-950 rounded-lg border border-dashed border-slate-700 p-6">
+          <span class="block text-xs font-mono text-emerald-400 mb-2">p-6 (calc)</span>
+          <div class="content-box">Content</div>
+        </div>
+        <div class="bg-slate-950 rounded-lg border border-dashed border-slate-700 p-px">
+          <span class="block text-xs font-mono text-emerald-400 mb-2">p-px (1px)</span>
+          <div class="content-box">Content</div>
+        </div>
+        <div class="bg-slate-950 rounded-lg border border-dashed border-slate-700 p-(--custom-property)">
+          <span class="block text-xs font-mono text-emerald-400 mb-2">p-(--custom-property)</span>
+          <div class="content-box">Content</div>
+        </div>
+        <div class="bg-slate-950 rounded-lg border border-dashed border-slate-700 p-[45px]">
+          <span class="block text-xs font-mono text-emerald-400 mb-2">p-[45px]</span>
+          <div class="content-box">Content</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUP 2: Axis Padding (px- and py-) -->
+    <section class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-6">
+      <h2 class="text-lg font-bold text-cyan-400 mb-2">Group 2: Axis Padding (Horizontal & Vertical)</h2>
+      <p class="text-xs text-slate-400 mb-4">px-* (Inline / Left-Right) & py-* (Block / Top-Bottom)</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <!-- Horizontal Axis (px) -->
+        <div class="space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Horizontal (px) Group</h3>
+          <div class="bg-slate-950 rounded-lg border border-dashed border-cyan-500/30 px-8 py-2"><div class="content-box">px-8</div></div>
+          <div class="bg-slate-950 rounded-lg border border-dashed border-cyan-500/30 px-px py-2"><div class="content-box">px-px</div></div>
+          <div class="bg-slate-950 rounded-lg border border-dashed border-cyan-500/30 px-(--custom-property) py-2"><div class="content-box">px-(var)</div></div>
+          <div class="bg-slate-950 rounded-lg border border-dashed border-cyan-500/30 px-[50px] py-2"><div class="content-box">px-[50px]</div></div>
+        </div>
+        <!-- Vertical Axis (py) -->
+        <div class="space-y-3">
+          <h3 class="text-xs font-bold uppercase tracking-wider text-slate-400">Vertical (py) Group</h3>
+          <div class="bg-slate-950 rounded-lg border border-dashed border-cyan-500/30 px-2 py-8"><div class="content-box">py-8</div></div>
+          <div class="bg-slate-950 rounded-lg border border-dashed border-cyan-500/30 px-2 py-px"><div class="content-box">py-px</div></div>
+          <div class="bg-slate-950 rounded-lg border border-dashed border-cyan-500/30 px-2 py-(--custom-property)"><div class="content-box">py-(var)</div></div>
+          <div class="bg-slate-950 rounded-lg border border-dashed border-cyan-500/30 px-2 py-[50px]"><div class="content-box">py-[50px]</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUP 3: Logical Padding (ps, pe, pbs, pbe) -->
+    <section class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-6">
+      <h2 class="text-lg font-bold text-amber-400 mb-2">Group 3: Logical Padding (Direction-Aware)</h2>
+      <p class="text-xs text-slate-400 mb-4">ps (Start), pe (End), pbs (Block Start), pbe (Block End)</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-slate-950 rounded-lg border-l-2 border-dashed border-amber-500 ps-8 py-4">
+          <span class="block text-[10px] font-mono text-slate-400">ps-8</span>
+          <div class="content-box">Start</div>
+        </div>
+        <div class="bg-slate-950 rounded-lg border-r-2 border-dashed border-amber-500 pe-px py-4">
+          <span class="block text-[10px] font-mono text-slate-400">pe-px</span>
+          <div class="content-box">End</div>
+        </div>
+        <div class="bg-slate-950 rounded-lg border-t-2 border-dashed border-amber-500 pbs-(--custom-property) px-4">
+          <span class="block text-[10px] font-mono text-slate-400">pbs-(var)</span>
+          <div class="content-box">Block Start</div>
+        </div>
+        <div class="bg-slate-950 rounded-lg border-b-2 border-dashed border-amber-500 pbe-[40px] px-4">
+          <span class="block text-[10px] font-mono text-slate-400">pbe-[40px]</span>
+          <div class="content-box">Block End</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GROUP 4: Absolute Directional Padding (pt, pr, pb, pl) -->
+    <section class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-6">
+      <h2 class="text-lg font-bold text-rose-400 mb-2">Group 4: Absolute Padding (Top, Right, Bottom, Left)</h2>
+      <p class="text-xs text-slate-400 mb-4">Physical layout settings for precise layout control.</p>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Top (pt) -->
+        <div class="bg-slate-950 p-4 rounded-lg space-y-2">
+          <span class="text-xs text-rose-300 font-mono block">Top (pt-*)</span>
+          <div class="bg-slate-900 border border-rose-500/20 pt-6"><div class="content-box">pt-6</div></div>
+          <div class="bg-slate-900 border border-rose-500/20 pt-(--custom-property)"><div class="content-box">pt-(var)</div></div>
+        </div>
+        <!-- Right (pr) -->
+        <div class="bg-slate-950 p-4 rounded-lg space-y-2">
+          <span class="text-xs text-rose-300 font-mono block">Right (pr-*)</span>
+          <div class="bg-slate-900 border border-rose-500/20 pr-6"><div class="content-box">pr-6</div></div>
+          <div class="bg-slate-900 border border-rose-500/20 pr-[30px]"><div class="content-box">pr-[30px]</div></div>
+        </div>
+        <!-- Bottom (pb) -->
+        <div class="bg-slate-950 p-4 rounded-lg space-y-2">
+          <span class="text-xs text-rose-300 font-mono block">Bottom (pb-*)</span>
+          <div class="bg-slate-900 border border-rose-500/20 pb-px"><div class="content-box">pb-px</div></div>
+          <div class="bg-slate-900 border border-rose-500/20 pb-[2rem]"><div class="content-box">pb-[2rem]</div></div>
+        </div>
+        <!-- Left (pl) -->
+        <div class="bg-slate-950 p-4 rounded-lg space-y-2">
+          <span class="text-xs text-rose-300 font-mono block">Left (pl-*)</span>
+          <div class="bg-slate-900 border border-rose-500/20 pl-8"><div class="content-box">pl-8</div></div>
+          <div class="bg-slate-900 border border-rose-500/20 pl-(--custom-property)"><div class="content-box">pl-(var)</div></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="max-w-6xl mx-auto mt-12 text-center text-xs text-slate-500">
+    Tailwind CSS v4 Spec Sandbox Generator.
+  </footer>
+
+</body>
+</html>
