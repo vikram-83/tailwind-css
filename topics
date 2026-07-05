@@ -1,0 +1,200 @@
+Tailwind CSS- 
+What is Tailwind CSS?
+Professional Definition
+Tailwind CSS is a utility-first, open-source CSS framework that provides low-level utility classes to build modern, responsive, and customizable user interfaces directly within HTML without writing traditional custom CSS for every component.
+Tailwind CSS was created by Adam Wathan, a Canadian web developer and educator.
+0r
+A utility-first CSS framework packed with classes like flex, pt-4, text-center, and rotate-90 that can be composed to build any design, directly in your markup."
+
+
+1. Introduction
+1.	What is Tailwind CSS? 
+2.	Advantages & Disadvantages 
+3.	Tailwind vs CSS vs Bootstrap 
+4.	Utility-First CSS 
+________________________________________
+2. Installation
+5.	Install Tailwind using CDN 
+6.	Install with Vite 
+7.	Install with React 
+8.	Install with Node.js 
+9.	Tailwind Folder Structure 
+10.	Configuration (tailwind.config.js) 
+________________________________________
+3. Colors
+11.	Text Colors 
+12.	Background Colors 
+13.	Border Colors 
+14.	Opacity 
+15.	Custom Colors 
+________________________________________
+4. Typography
+16.	Font Family 
+17.	Font Size 
+18.	Font Weight 
+19.	Text Align 
+20.	Line Height 
+21.	Letter Spacing 
+22.	Text Decoration 
+23.	Text Transform 
+________________________________________
+5. Spacing
+24.	Margin 
+25.	Padding 
+26.	Space Between Elements 
+27.	Width 
+28.	Height 
+29.	Min/Max Width 
+30.	Min/Max Height 
+________________________________________
+6. Layout
+31.	Display 
+32.	Position 
+33.	Z-index 
+34.	Overflow 
+35.	Visibility 
+36.	Object Fit 
+37.	Aspect Ratio 
+________________________________________
+7. Flexbox
+38.	Flex Container 
+39.	Flex Direction 
+40.	Justify Content 
+41.	Align Items 
+42.	Flex Grow 
+43.	Flex Shrink 
+44.	Flex Wrap 
+45.	Order 
+________________________________________
+8. Grid
+46.	Grid Container 
+47.	Grid Columns 
+48.	Grid Rows 
+49.	Column Span 
+50.	Row Span 
+51.	Gap 
+52.	Auto Flow 
+________________________________________
+9. Borders
+53.	Border Width 
+54.	Border Radius 
+55.	Border Style 
+56.	Divide Utilities 
+57.	Ring Utilities 
+________________________________________
+10. Background
+58.	Background Image 
+59.	Background Size 
+60.	Background Position 
+61.	Background Repeat 
+62.	Gradient 
+63.	Background Attachment 
+________________________________________
+11. Effects
+64.	Shadow 
+65.	Opacity 
+66.	Blur 
+67.	Brightness 
+68.	Contrast 
+69.	Grayscale 
+70.	Backdrop Blur 
+________________________________________
+12. Transforms
+71.	Scale 
+72.	Rotate 
+73.	Translate 
+74.	Skew 
+75.	Transform Origin 
+________________________________________
+13. Transitions & Animation
+76.	Transition 
+77.	Duration 
+78.	Delay 
+79.	Timing Function 
+80.	Hover Animation 
+81.	Bounce 
+82.	Spin 
+83.	Ping 
+84.	Pulse 
+85.	Custom Animation 
+________________________________________
+14. Responsive Design
+86.	Mobile First 
+87.	sm 
+88.	md 
+89.	lg 
+90.	xl 
+91.	2xl 
+________________________________________
+15. Pseudo Classes
+92.	Hover 
+93.	Focus 
+94.	Active 
+95.	Disabled 
+96.	Visited 
+97.	First 
+98.	Last 
+99.	Odd 
+100.	Even 
+________________________________________
+16. Dark Mode
+101.	Dark Mode Setup 
+102.	Dark Classes 
+103.	Theme Toggle 
+________________________________________
+17. Forms
+104.	Input Styling 
+105.	Buttons 
+106.	Checkbox 
+107.	Radio 
+108.	Select 
+109.	Textarea 
+________________________________________
+18. Components Practice
+110.	Navbar 
+111.	Hero Section 
+112.	Cards 
+113.	Pricing Cards 
+114.	Login Form 
+115.	Registration Form 
+116.	Dashboard 
+117.	Sidebar 
+118.	Modal 
+119.	Table 
+120.	Footer 
+________________________________________
+19. Projects
+121.	Portfolio Website 
+122.	Landing Page 
+123.	E-commerce UI 
+124.	Admin Dashboard 
+125.	Blog Website 
+126.	Food Delivery UI 
+127.	Netflix Clone UI 
+128.	Spotify Clone UI 
+129.	Chat Application UI 
+130.	Full Responsive Website 
+________________________________________
+20. Advanced Topics
+131.	Custom Theme 
+132.	Plugins 
+133.	Custom Utilities 
+134.	@apply 
+135.	@layer 
+136.	Arbitrary Values (w-[350px]) 
+137.	Arbitrary Colors (bg-[#1DA1F2]) 
+138.	Tailwind CLI 
+139.	Purge/Content Configuration 
+140.	Performance Optimization 
+Interview Questions
+1.	What is Tailwind CSS? 
+2.	Why is Tailwind called a Utility-First framework? 
+3.	How is Tailwind different from Bootstrap? 
+4.	What are the advantages of Tailwind CSS? 
+5.	What are its disadvantages? 
+6.	Explain bg-blue-500. 
+7.	Why does Tailwind reduce CSS file size? 
+8.	What is the difference between p-4, px-4, and py-4? 
+9.	How does Tailwind handle responsive design? 
+10.	Why is Tailwind popular in React and Next.js projects? 
+
